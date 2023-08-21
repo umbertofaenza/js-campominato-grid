@@ -23,7 +23,6 @@ body {
 }
 
 .cell {
-  width: calc(100% / 10);
   aspect-ratio: 1;
   background-color: #ffff99;
   border: 1px solid black;

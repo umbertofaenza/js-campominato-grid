@@ -21,6 +21,15 @@ function generateGrid(totalCells) {
   for (let i = 1; i <= totalCells; i++) {
     const generatedCell = generateCell();
     generatedCell.innerText = i;
+
+    if (difficultySelect.value == "1") {
+      generatedCell.style = "width: calc(100% / 10)";
+    } else if (difficultySelect.value == "2") {
+      generatedCell.style = "width: calc(100% / 9)";
+    } else if (difficultySelect.value == "3") {
+      generatedCell.style = "width: calc(100% / 7)";
+    }
+
     grid.append(generatedCell);
   }
 }
