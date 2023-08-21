@@ -1,21 +1,29 @@
 const createBtn = document.getElementById("create-btn");
 const grid = document.getElementById("grid");
 
-createBtn.addEventListener("click", function () {
-  generateGrid();
-});
+// function to generate a cell
+function generateCell() {
+  const cell = document.createElement("div");
+  cell.classList.add("cell");
 
-function generateGrid() {
-  for (let i = 1; i <= 100; i++) {
-    const cell = document.createElement("div");
-    cell.classList.add("cell");
-    cell.innerText = i;
+  cell.addEventListener("click", function () {
+    this.classList.add("clicked");
+    console.log(this.innerText);
+  });
 
-    cell.addEventListener("click", function () {
-      this.classList.add("clicked");
-      console.log(i);
-    });
+  return cell;
+}
 
-    grid.append(cell);
+// function to generate a grid with the number of cells we want
+function generateGrid(totalCells) {
+  for (let i = 1; i <= totalCells; i++) {
+    const generatedCell = generateCell();
+    generatedCell.innerText = i;
+    grid.append(generatedCell);
   }
 }
+
+// button to generate grid
+createBtn.addEventListener("click", function () {
+  generateGrid(100);
+});
