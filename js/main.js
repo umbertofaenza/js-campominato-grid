@@ -9,6 +9,7 @@ function generateGrid() {
   for (let i = 1; i <= 100; i++) {
     const cell = document.createElement("div");
     cell.classList.add("cell");
+    cell.innerText = i;
 
     grid.append(cell);
   }

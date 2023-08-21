@@ -27,4 +27,7 @@ body {
   aspect-ratio: 1;
   background-color: #ffff99;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
