@@ -11,6 +11,11 @@ function generateGrid() {
     cell.classList.add("cell");
     cell.innerText = i;
 
+    cell.addEventListener("click", function () {
+      this.classList.add("clicked");
+      console.log(i);
+    });
+
     grid.append(cell);
   }
 }
