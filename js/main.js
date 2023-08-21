@@ -1,5 +1,7 @@
 const createBtn = document.getElementById("create-btn");
+const emptyBtn = document.getElementById("empty-btn");
 const grid = document.getElementById("grid");
+const difficultySelect = document.getElementById("difficulty-select");
 
 // function to generate a cell
 function generateCell() {
@@ -26,4 +28,9 @@ function generateGrid(totalCells) {
 // button to generate grid
 createBtn.addEventListener("click", function () {
   generateGrid(100);
+});
+
+// button to empty grid
+emptyBtn.addEventListener("click", function () {
+  grid.innerHTML = "";
 });
