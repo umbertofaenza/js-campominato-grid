@@ -27,7 +27,15 @@ function generateGrid(totalCells) {
 
 // button to generate grid
 createBtn.addEventListener("click", function () {
-  generateGrid(100);
+  grid.innerHTML = "";
+
+  if (difficultySelect.value == "1") {
+    generateGrid(100);
+  } else if (difficultySelect.value == "2") {
+    generateGrid(81);
+  } else if (difficultySelect.value == "3") {
+    generateGrid(49);
+  }
 });
 
 // button to empty grid
